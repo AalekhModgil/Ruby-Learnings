@@ -1,3 +1,4 @@
+
 loop do
   print "Enter a number between 1 and 10 : "
   number = gets.to_i
