@@ -1,3 +1,4 @@
+
 def matchString(array,inputString)
   array.each.with_index do |string,index|
     if string == inputString

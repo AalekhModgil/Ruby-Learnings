@@ -1,3 +1,4 @@
+
 names = gets.split
 inputName = gets.chomp
 
