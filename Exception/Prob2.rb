@@ -3,7 +3,6 @@ class CustomAgeError < StandardError
     super(msg)
   end
 end
-
 begin
   print "Enter your age :- "
   age = gets.to_i
