@@ -10,7 +10,6 @@ class DataBaseError < StandardError
   end
 end
 
-
 def databaseConnectionStatus(status)
   begin
     if status == 0
