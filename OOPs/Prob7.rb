@@ -14,16 +14,13 @@ end
 
 class EmailMessage
   include Message
-
   def send_message
     puts "This is an email!"
   end
 end
 
-
 class SMSMessage
   include Message
-
   def send_message
     puts "This is a SMS!"
   end
