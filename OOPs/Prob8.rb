@@ -18,7 +18,7 @@ class Square < Shape
   end
 
   def area
-    puts "Area of square is :- #{@side**2}"
+    @side**2
   end
 end
 
@@ -29,12 +29,12 @@ class Triangle < Shape
   end
   
   def area
-    puts "Area of Triangle is :- #{(0.5*@base*@height)}"
+    0.5*@base*@height
   end
 end
 
 shapes = [Triangle.new(2,10),Square.new(4),Triangle.new(5,10)]
 
 shapes.each do |shape|
-  shape.area
+  puts "The area is :- #{shape.area}"
 end
