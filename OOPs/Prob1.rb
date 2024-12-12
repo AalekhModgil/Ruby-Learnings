@@ -29,7 +29,6 @@ class BankAccount
       @balance -= amount
       puts "Withdraw Successful!"
       puts "Updated Balance :- $#{@balance}"
-    
       # if amount <= @balance
       #   @balance -= amount
       #   puts "Withdraw Successful!"
