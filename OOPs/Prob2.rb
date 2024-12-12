@@ -19,16 +19,26 @@ class Student
 
   def add_grade(grade)
     @grades.push(grade)
+    puts "Grade added successfully"
   end
 
   def calculate_average
-    average = @grades.sum/@grades.length
-    puts "Average grade of #{@name} :- #{average}"
+    if @grades.empty?
+      puts "No grades available to calculate the average."
+    else
+      average = @grades.sum/@grades.length
+      puts "Average grade of #{@name} :- #{average}"
+    end
+  end
+
+  def grades
+    return @grades.freeze
   end
 end
 
 student1 = Student.new("Aalekh",21)
 student1.add_grade(100)
 student1.add_grade(80)
+# student1.grades.push(100)
 student1.calculate_average
 
