@@ -8,21 +8,28 @@
 
 
 class Employee
+
+  attr_accessor :name , :salary
+
   def initialize(name,salary)
     @name=name
     @salary=salary
   end
 
   def display_details
-    puts "Name of #{self.class}:- #{@name}"
-    puts "Salary of #{self.class}:- #{@salary}" 
+    puts "Name of #{self.class}:- #{@name}, Salary :- #{@salary}"
   end
+
 end
 
 class Manager < Employee
-  def give_bonus(bonus)
-    @salary += bonus
-    puts "Congratulations for the bonus!"
+  def give_bonus(employee,bonus)
+    if employee.is_a?(Employee)
+      employee.salary +=bonus
+      puts "Developer #{employee.name} has received a bonus of #{bonus} from Manager #{@name}. New salary :- #{employee.salary}."
+    else
+      puts "Can only give bonuses to employees."
+    end
   end
 end
 
@@ -30,18 +37,25 @@ end
 class Developer < Employee
   def increase_salary(percentage)
     @salary += (@salary*percentage/100)
-    puts "Congratulations for salary increase!"
+    puts "Developer #{@name}'s salary increased by #{percentage}%. New salary :- #{@salary}"
   end
 end
 
 
-manager = Manager.new("Aalekh",100000)
-developer = Developer.new("Aryan",50000)
-
-manager.display_details
-manager.give_bonus(5000)
-manager.display_details
+manager = Manager.new("Aalekh",10000)
+developer = Developer.new("Aryan",5000)
 
 developer.display_details
+manager.give_bonus(developer,1000)
+developer.display_details
+
 developer.increase_salary(10)
 developer.display_details
+
+manager.display_details
+
+
+
+
+
+
