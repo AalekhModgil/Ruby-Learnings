@@ -24,7 +24,6 @@ class BankAccount
     @balance += amount
   end
 
-
   def withdraw(amount)
     if amount <=0
        raise ArgumentError, "Withdrawal amount must be positive"
