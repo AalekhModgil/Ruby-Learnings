@@ -41,6 +41,7 @@ RSpec.describe Calculator do    #  Groups all the tests for the Calculator class
 end
                                  
 # What is happening :-
+
 # The class (Calculator.rb) contains the methods.
 # The test file (Calculator_spec.rb) defines test cases that call the methods and check their behavior.
 # RSpec runs the tests, comparing actual results from the methods to the expected results.
