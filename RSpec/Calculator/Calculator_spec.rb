@@ -39,8 +39,7 @@ RSpec.describe Calculator do    #  Groups all the tests for the Calculator class
     end 
   end 
 end
-          
-                         
+                                 
 # What is happening :-
 
 # The class (Calculator.rb) contains the methods.
