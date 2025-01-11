@@ -25,3 +25,4 @@ print "Enter second array :- "
 nums2 = gets.chomp.split.map{|num| num.to_i}
 
 puts nextGreaterElement(nums1,nums2).inspect
+
